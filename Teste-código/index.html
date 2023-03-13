@@ -22,4 +22,11 @@ meli_ga("set", "contentGroup3", "/NONE/SPLINTER/LANDING/CORE/TIER1/DIA-DO-CONSUM
 meli_ga("set", "dimension1", "desktop");
 meli_ga("set", "dimension7", "MARKETPLACE");
 meli_ga("set", "dimension8", "CORE");
+(function(d, win) {
+      win['GA-user-traceability-consent'] = true;
+      var i = d.createElement('iframe');
+      (i.frameElement || i).style.cssText = 'width: 0; height: 0; border: 0; position: absolute';
+      i.src = "about:srcdoc";
+      i.srcdoc="\<script\  src='https://http2.mlstatic.com/analytics/ga/mlb-ml-analytics.min.js'>\</script\>";
+      i.id = "GoogleAnalyticsIframe";
 </script>
