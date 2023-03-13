@@ -29,4 +29,12 @@ meli_ga("set", "dimension8", "CORE");
       i.src = "about:srcdoc";
       i.srcdoc="\<script\  src='https://http2.mlstatic.com/analytics/ga/mlb-ml-analytics.min.js'>\</script\>";
       i.id = "GoogleAnalyticsIframe";
+      var w = d.getElementsByTagName('script')[0];
+      w.parentNode.insertBefore(i, w);
+      var doc = i.contentWindow.document;
+      var s = doc.createElement('script');
+      s.type = 'text/javascript';
+      s.text ='window.inDapIF = true;';
+      doc.documentElement.appendChild(s);
+    })(document, window);
 </script>
